@@ -2,9 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="imgs/logo_квадратне_стогони.svg" rel="icon" type="image/x-icon">
+    <title>Стогони НІН</title>
 </head>
 <body>
-
+<header>
+    <a href="index.html">
+        <img src="imgs/logo_стогони.svg" width="200" alt="logo">
+    </a>
+    <nav>
+        <a href="help.html">Допомога</a>
+        <a href="help.html">Контакти</a>
+        <a href="publish.html">Публікувати</a>
+        <a href="account.html">Профіль</a>
+    </nav>
+</header>
+<main>
+    <form id="publish-form" autocomplete="on" action="publish.html" method="post">
+        <section id="file-input-panel">
+            <input type="file" name="file-input" id="file-input">
+            <video id="video-preview" width="300" muted src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"></video>
+            <input type="range" id="time-slider" min="0" max="100" step="1" value="0">
+            <input type="text" id="time-text" value="0:02:30:20">
+        </section>
+        <section id="info-input-panel">
+            <input type="text" id="info-input-title" placeholder="Назва відео">
+            <textarea id="info-input-description" placeholder="Опис відео"></textarea>
+            <section id="info-input-tags">
+                <input type="text" id="tag-input" name="tag-input" placeholder="tag_name" autocomplete="on">
+                <button type="button" id="add-tag-button">Додати тег</button>
+                <section id="tag-panel">
+                    <span class="tag-item">Тег1</span>
+                    <span class="tag-item">Тег2</span>
+                    <span class="tag-item">Тег3</span>
+                </section>
+            </section>
+        </section>
+        <button>Надіслати на сервер</button>
+    </form>
+</main>
+<footer>
+    Будь-що, це футер
+</footer>
 </body>
 </html>
