@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet">
+    <title>Title</title>
+</head>
+<body>
+<header>
+    <img src="imgs/logo_стогони.svg" width="200" alt="logo">
+    <nav>
+        <a href="help.html">Допомога</a>
+        <a href="help.html">Контакти</a>
+        <a href="publish.html">Публікувати</a>
+        <a href="account.html">Профіль</a>
+    </nav>
+</header>
+<main>
+    <section id="search-panel">
+        <section id="search-input-panel"></section>
+        <button id="search-button">Пошук</button>
+        <input type="text" id="name-input" name="name-input" placeholder="Назва відео">
+        <input type="text" id="tag-input" name="tag-input" placeholder="tag_name" autocomplete="on">
+        <button type="button" id="add-tag-button">Додати тег</button>
+        <section id="tag-panel">
+            <span class="tag-item">Тег1</span>
+            <span class="tag-item">Тег2</span>
+            <span class="tag-item">Тег3</span>
+        </section>
+    </section>
+    <section id="content-list" style="display: flex; flex-wrap: wrap;">
+        <article class="search-result-element">
+            <a href="index.html">
+                <img src="imgs/example_result.png" width="150" alt="Результат">
+            </a>
+            <section class="search-result-statistics">
+                <div class="search-result-statistics-likes">
+                    <span>Лайки:</span>
+                    <span>200</span>
+                </div>
+                <div class="search-result-statistics-views">
+                    <span>Перегляди:</span>
+                    <span>2300</span>
+                </div>
+            </section>
+            <section class="search-result-statistics-buttons">
+                <button type="button" class="result-download">Скачати</button>
+                <button type="button" class="result-copy">Скопіювати</button>
+            </section>
+            <section class="search-result-description">
+                <span class="search-result-description-name">Назва відео</span>
+            </section>
+            <section class="search-result-hover" style="display: none;">
+                <button type="button" class="result-download">Скачати</button>
+                <button type="button" class="result-copy">Скопіювати</button>
+                <button type="button" class="result-info">Скачати</button>
+            </section>
+        </article>
+    </section>
+    <section id="pagination-panel">
+        <a href="#" id="pagination-arrow-left">&laquo;</a>
+        <a href="#" class="page-position">1</a>
+        <a href="#" class="page-position">2</a>
+        <a href="#" class="page-position page-position-active">3</a>
+        <a href="#" class="page-position">4</a>
+        <a href="#" class="page-position">5</a>
+        <a href="#" id="pagination-arrow-right">&raquo;</a>
+    </section>
+</main>
+<footer>
+    Будь-що
+</footer>
+</body>
+</html>
