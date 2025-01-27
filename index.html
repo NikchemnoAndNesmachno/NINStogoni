@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link href="style.css" rel="stylesheet">
-    <title>Title</title>
+    <link href="imgs/logo_квадратне_стогони.svg" rel="icon" type="image/x-icon">
+    <title>Стогони НІН</title>
 </head>
 <body>
 <header>
@@ -30,30 +31,30 @@
     </section>
     <section id="content-list" style="display: flex; flex-wrap: wrap;">
         <article class="search-result-element">
-            <a href="index.html">
+            <a href="item_card.html">
                 <img src="imgs/example_result.png" width="150" alt="Результат">
             </a>
             <section class="search-result-statistics">
                 <div class="search-result-statistics-likes">
-                    <span>Лайки:</span>
-                    <span>200</span>
+                    <span class="likes-title">Лайки:</span>
+                    <span class="likes-number">200</span>
                 </div>
                 <div class="search-result-statistics-views">
-                    <span>Перегляди:</span>
-                    <span>2300</span>
+                    <span class="views-title">Перегляди:</span>
+                    <span class="views-number">2300</span>
                 </div>
             </section>
             <section class="search-result-statistics-buttons">
-                <button type="button" class="result-download">Скачати</button>
-                <button type="button" class="result-copy">Скопіювати</button>
+                <button type="button" id="download-button" class="result-download">Скачати</button>
+                <button type="button" id="copy-button" class="result-copy">Скопіювати</button>
             </section>
             <section class="search-result-description">
                 <span class="search-result-description-name">Назва відео</span>
             </section>
             <section class="search-result-hover" style="display: none;">
-                <button type="button" class="result-download">Скачати</button>
-                <button type="button" class="result-copy">Скопіювати</button>
-                <button type="button" class="result-info">Скачати</button>
+                <button type="button" id="hover-download-button" class="result-download">Скачати</button>
+                <button type="button" id="hover-copy-button" class="result-copy">Скопіювати</button>
+                <button type="button" id="hover-info-button" class="result-info">Скачати</button>
             </section>
         </article>
     </section>
