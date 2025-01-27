@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet">
+    <link href="imgs/logo_квадратне_стогони.svg" rel="icon" type="image/x-icon">
+    <title>Стогони НІН</title>
+    <script src="https://accounts.google.com/gsi/client" async></script>
+</head>
+<body>
+<header>
+    <a href="index.html">
+        <img src="imgs/logo_стогони.svg" width="200" alt="logo">
+    </a>
+    <nav>
+        <a href="help.html">Допомога</a>
+        <a href="help.html">Контакти</a>
+        <a href="publish.html">Публікувати</a>
+        <a href="account.html">Профіль</a>
+    </nav>
+</header>
+<main>
+    <form id="login-form" action="index.html" method="post">
+        <input type="email" name="email" id="input-email" placeholder="Email">
+        <input type="password" name="password" id="input-password" placeholder="Password">
+        <button id="button-login">Увійти</button>
+        <button id="button-signup" type="button" onclick="location.href='signup.html'">Зареєструватися</button>
+
+        <!--Я це взяв звідси https://developers.google.com/identity/gsi/web/guides/display-button#html -->
+        <div id="g_id_onload"
+             data-login_uri="https://your.domain/your_login_endpoint">
+        </div>
+        <div id="google-login-button" class="g_id_signin" style="width: 200px;"
+             data-type="standard"
+             data-size="large"
+             data-theme="outline"
+             data-text="sign_in_with"
+             data-shape="rectangular"
+             data-logo_alignment="left">
+        </div>
+    </form>
+</main>
+<footer>
+    Будь-що
+</footer>
+</body>
+</html>
