@@ -1,0 +1,200 @@
+body{
+    background-color: black;
+    font: 14px "Liberation Mono", Helvetica, Arial, sans-serif;
+}
+header{
+
+    display: flex;
+    justify-content: space-between;
+    padding: 1vh 5vw 1vh 1vw;
+    align-items: stretch;
+    background-color: black;
+    max-height: 10vh;
+    height: 100%;
+    border-bottom: red solid 2px;
+    margin-bottom: 10px;
+    a
+    {
+        max-height: inherit;
+    }
+    img{
+        max-height: inherit;
+        height: 100%;
+        width: 100%;
+    }
+    & #navigation-panel{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        a {
+            padding: 10px;
+            border: black solid 2px;
+            &.nav-info{
+                color: dodgerblue;
+                &:hover{
+                    border-color: dodgerblue;
+                }
+            }
+            &.nav-action{
+                color: lime;
+                &:hover{
+                    border-color: limegreen;
+                }
+            }
+            &.nav-account{
+                color: deeppink;
+                &:hover{
+                    border-color: deeppink;
+                }
+            }
+            text-decoration: none;
+            &:hover{
+                border-color: red;
+            }
+        }
+    }
+}
+#search-input-panel{
+    display: flex;
+    gap: 10px;
+    button{
+        padding: 15px;
+        text-align: center;
+        color: deeppink;
+        text-decoration: none;
+        background-color: transparent;
+        border: deeppink solid 2px;
+        &:active{
+            border-color: lime;
+            color: lime;
+          transform: scale(0.90);
+        }
+    }
+    input[type=search]{
+        &::placeholder{
+            color: darkcyan;
+        }
+        color: lime;
+        padding: 10px;
+        height: inherit;
+        outline: deepskyblue solid 1px;
+        background-color: black;
+        border: none;
+        &:focus{
+            outline: lime solid 2px;
+            border-radius: 0;
+            border: none;
+        }
+    }
+}
+
+#content-list{
+    height: 70vh;
+    background-color: #444;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, min(200px, 25%));
+    grid-template-rows: auto 1fr;
+    grid-row-gap: 0;
+    grid-gap: 5px;
+    padding: 5px;
+    article{
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        position: relative;
+        .search-result-below-panel{
+            background-color: rgba(25,0,50,0.8);
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .search-result-statistics{
+                display: flex;
+                flex-direction: column;
+                .search-result-statistics-likes span{
+                    color: lime;
+                }
+                .search-result-statistics-views{
+                    color:cyan;
+                }
+            }
+            .search-result-statistics-buttons{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: stretch;
+                gap: 5px;
+                button{
+                    height: auto;
+                    width: 100%;
+                    background-color: black;
+                    color: lime;
+                    border: lime solid 1px;
+                    &:active{
+                        transform: scale(0.9);
+                    }
+                    &.result-copy{
+                        color: cyan;
+                        border-color: cyan;
+                    }
+                }
+
+            }
+        }
+        .search-result-description{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background-color: rgba(25,0,50,0.8);
+            span{
+                display: inline-block;
+                width: 100%;
+            ;
+                text-align: center;
+                color: cyan;
+            }
+        }
+        a img{
+            background-color: white;
+            min-width: 25%;
+            max-width: 100%;
+        }
+    }
+}
+
+#pagination-panel{
+    font-size: 24px;
+    margin-top: 10px;
+    padding: 10px;
+    border: dodgerblue solid 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    gap: 10px;
+    #pagination-arrow-left, #pagination-arrow-right{
+        color: lime;
+        font-size: 36px;
+    }
+    a{
+        color: dodgerblue;
+        &:active{
+            transform: scale(0.9);
+        }
+        &.page-position-active{
+            font-size: 1.3em;
+            color: lime;
+        }
+        text-decoration: none;
+    }
+}
+footer{
+    height: 10vh;
+    background-color: darkblue;
+}
+
