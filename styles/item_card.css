@@ -1,0 +1,113 @@
+body{
+    color: red;
+    background-color: black;
+    font: 14px "Liberation Mono", Helvetica, Arial, sans-serif;
+}
+@media (max-width: 500px) {
+    .search-result-statistics-buttons{
+        font-size: 0.8em;
+    }
+}
+
+#item-video-player{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    video{
+        width: 100%;
+        height: auto;
+        max-height: 50vh;
+    }
+    #item-video-name{
+        color: cyan;
+    }
+    margin-bottom: 20px;
+    &::after{
+        content: "";
+        width: 100%;
+        border-top: 2px solid red;
+    }
+}
+
+#item-video-info-panel{
+    display: flex;
+    flex-direction: column;
+    #item-video-upper-panel{
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+
+    #info-statistics-panel{
+        font-size: 1.2em;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        #info-statistics-likes{
+            color: lime;
+        }
+        #info-statistics-views{
+            color: cyan;
+        }
+        #info-statistics-date{
+            display: flex;
+            flex-direction: column;
+            color: dodgerblue;
+        }
+        #info-statistics-likes,
+        #info-statistics-views{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            :first-child{
+                font-size: 1.2em;
+            }
+        }
+    }
+    #info-tags-panel{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap:10px;
+        .tag-item{
+            padding: 5px;
+            color:black;
+            background-color: dodgerblue;
+        }
+    }
+    #button-panel{
+        display: flex;
+        justify-content: right;
+        align-self: center;
+        flex-wrap: wrap;
+        button{
+            width: 100%;
+            background-color: black;
+            border: 1px solid cyan;
+            padding: 10px;
+            &:active{
+                scale: 0.9;
+            }
+        }
+        #download-button{
+            color: lime;
+            border-color: lime;
+        }
+        #copy-button{
+            color: cyan;
+            border-color: cyan;
+        }
+    }
+    #info-description{
+        padding: 20px 10px 10px;
+        color: dodgerblue;
+        &::after{
+            content: "";
+            border-top: 2px solid cyan;
+            width: 100%;
+        }
+    }
+}
+

@@ -2,54 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="styles/header.css" rel="stylesheet">
+    <link href="styles/item_card.css" rel="stylesheet">
+    <link href="imgs/fonts/icomoon.css" rel="stylesheet">
     <link href="imgs/logo_квадратне_стогони.svg" rel="shortcut icon" type="image/x-icon">
     <title>Назва відео</title>
 </head>
 <body>
 <header>
     <a href="index.html">
-        <img src="imgs/logo_стогони.svg" width="200" alt="logo">
+        <img src="imgs/logo_стогони.svg" alt="logo">
     </a>
-    <nav>
-        <a href="help.html">Допомога</a>
-        <a href="help.html">Контакти</a>
-        <a href="publish.html">Публікувати</a>
-        <a href="account.html">Профіль</a>
+    <nav id="navigation-panel">
+        <a class="nav-info" href="help.html">
+            <span class="ico-help"></span>
+            <span class="nav-hint">Допомога</span></a>
+        <a class="nav-info" href="help.html">
+            <span class="ico-contact"></span>
+            <span class="nav-hint">Контакти</span></a>
+        <a class="nav-action" href="publish.html">
+            <span class="ico-upload"></span>
+            <span class="nav-hint">Публікувати</span></a>
+        <a class="nav-account" href="signin.html">
+            <span class="ico-account"></span>
+            <span class="nav-hint">Профіль</span></a>
     </nav>
 </header>
 <main>
     <section id="item-video-player">
-        <video id="item-video" autoplay muted>
-            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+        <video id="item-video" autoplay muted controls>
+            <source src="imgs/video.mp4" type="video/mp4">
         </video>
         <span id="item-video-name">Назва відео</span>
     </section>
     <article id="item-video-info-panel">
-        <section id="info-statistics-panel">
-            <div id="info-statistics-likes">
-                <span class="likes-title">Лайки: </span>
-                <span class="likes-number">2000</span>
-            </div>
-            <div id="info-statistics-views">
-                <span class="views-title">Перегляди: </span>
-                <span class="views-number">20000</span>
-            </div>
-            <div id="info-statistics-date">
-                <span class="date-title">Дата додання:</span>
-                <span class="date-number">19.08.2003</span>
-                <span class="date-time">14:08</span>
-            </div>
-        </section>
-        <section id="info-tags-panel">
-            <span class="tag-item">Тег 1</span>
-            <span class="tag-item">Тег 2</span>
-            <span class="tag-item">Тег 3</span>
-        </section>
-        <aside id="button-panel">
-            <button type="button" id="download-button">Завантажити</button>
-            <button type="button" id="copy-button">Скопіювати</button>
-        </aside>
-        <span id="info-description">Якийсь опис відеоЯкийсь опис відеоЯкийсь опис відеоЯкийсь опис відео</span>
+        <div id="item-video-upper-panel">
+            <section id="info-statistics-panel">
+                <div id="info-statistics-likes">
+                    <span class="likes-title ico-like"></span>
+                    <span class="likes-number">2000</span>
+                </div>
+                <div id="info-statistics-views">
+                    <span class="views-title ico-views"></span>
+                    <span class="views-number">20000</span>
+                </div>
+                <div id="info-statistics-date">
+                    <span class="date-title"></span>
+                    <span class="date-number">19.08.2003</span>
+                    <span class="date-time">14:08</span>
+                </div>
+            </section>
+            <section id="info-tags-panel">
+                <span class="tag-item">Тег 1</span>
+                <span class="tag-item">Тег 2</span>
+                <span class="tag-item">Тег 3</span>
+            </section>
+            <aside id="button-panel">
+                <button type="button" id="download-button" class="ico-download"></button>
+                <button type="button" id="copy-button" class="ico-copy"></button>
+            </aside>
+        </div>
+        <span id="info-description">Якийсь опис відео<br>Якийсь опис відеоЯкийсь опис відеоЯкийсь опис відео</span>
     </article>
 </main>
 <footer style="text-align: center;">

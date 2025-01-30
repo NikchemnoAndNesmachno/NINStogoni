@@ -1,0 +1,61 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1vh 5vw 1vh 1vw;
+    align-items: stretch;
+    background-color: black;
+    max-height: 10vh;
+    height: 100%;
+    border-bottom: red solid 2px;
+    margin-bottom: 10px;
+    a
+    {
+        max-height: inherit;
+    }
+    img{
+        max-height: inherit;
+        height: 100%;
+        width: 100%;
+    }
+    & #navigation-panel{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 5px;
+            padding: 10px;
+            border: black solid 2px;
+            &.nav-info{
+                color: dodgerblue;
+                &:hover{
+                    border-color: dodgerblue;
+                }
+            }
+            &.nav-action{
+                color: lime;
+                &:hover{
+                    border-color: limegreen;
+                }
+            }
+            &.nav-account{
+                color: deeppink;
+                &:hover{
+                    border-color: deeppink;
+                }
+            }
+            text-decoration: none;
+            &:hover{
+                border-color: red;
+            }
+        }
+    }
+}
+@media (max-width: 500px) {
+    .nav-hint {
+        display: none;
+    }
+}
