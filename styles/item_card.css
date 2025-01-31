@@ -1,11 +1,15 @@
 body{
     color: red;
-    background-color: black;
+    background-color: #222223;
     font: 14px "Liberation Mono", Helvetica, Arial, sans-serif;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .search-result-statistics-buttons{
         font-size: 0.8em;
+    }
+    .upper-panel {
+        justify-content: center;
+        flex-direction: column;
     }
 }
 
@@ -15,35 +19,56 @@ body{
     align-items: center;
     justify-content: space-between;
     gap: 10px;
+    margin: 10px;
     video{
-        width: 100%;
+        padding: 30px;
+        background-color: #0e0524;
+        border-radius: 10px;
+        width: fit-content;
         height: auto;
-        max-height: 50vh;
+        max-height: 60vh;
     }
     #item-video-name{
+        border-radius: 10px;
+        width: auto;
+        text-align: center;
+        padding: 20px;
+
+        display: block;
+        font-size: 1.3em;
         color: cyan;
+        background-color: #150e24;
     }
-    margin-bottom: 20px;
     &::after{
         content: "";
         width: 100%;
-        border-top: 2px solid red;
+        border-top: 2px solid dodgerblue;
     }
 }
 
 #item-video-info-panel{
     display: flex;
     flex-direction: column;
-    #item-video-upper-panel{
-        display: grid;
-        grid-template-columns: 1fr 3fr 1fr;
+    padding: 20px;
+    .upper-panel{
+        border-radius: 10px 10px 0 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: #0e0524;
+        padding-bottom: 10px;
+        padding-top: 10px;
     }
 
     #info-statistics-panel{
+        padding: 10px;
         font-size: 1.2em;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
         gap: 10px;
+        justify-self: left;
         #info-statistics-likes{
             color: lime;
         }
@@ -65,25 +90,14 @@ body{
             }
         }
     }
-    #info-tags-panel{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        gap:10px;
-        .tag-item{
-            padding: 5px;
-            color:black;
-            background-color: dodgerblue;
-        }
-    }
     #button-panel{
         display: flex;
-        justify-content: right;
-        align-self: center;
+        flex-direction: row;
+        gap: 10px;
+        justify-self: right;
+        justify-content: center;
         flex-wrap: wrap;
         button{
-            width: 100%;
             background-color: black;
             border: 1px solid cyan;
             padding: 10px;
@@ -91,18 +105,73 @@ body{
                 scale: 0.9;
             }
         }
-        #download-button{
+        #like-button{
             color: lime;
             border-color: lime;
+        }
+        #download-button{
+            color: dodgerblue;
+            border-color: dodgerblue;
         }
         #copy-button{
             color: cyan;
             border-color: cyan;
         }
+        #report-button{
+            color: red;
+            border-color: red;
+        }
     }
+    details{
+        border-radius: 10px;
+        background-color: #36333a;
+        padding: 15px;
+        display: block;
+        margin-bottom: 10px;
+        summary{
+            border-radius: 10px;
+            user-select: none;
+            margin-bottom: 10px;
+            padding: 10px;
+            list-style: none;
+            &:hover{
+                cursor: pointer;
+            }
+            &:active{
+                background-color: darkred;
+            }
+            color: black;
+            background-color: red;
+
+        }
+        &[open] > summary{
+            color: black;
+            background-color: limegreen;
+            &:active{
+                background-color: green;
+            }
+        }
+        .details-content{
+            background-color: #0e0524;
+            padding: 10px;
+
+        }
+        #tags-list{
+            display: flex;
+            justify-content: left;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .tag-item{
+            padding: 5px;
+            color:black;
+            background-color: dodgerblue;
+        }
+    }
+
     #info-description{
         padding: 20px 10px 10px;
-        color: dodgerblue;
+        color: lightblue;
         &::after{
             content: "";
             border-top: 2px solid cyan;

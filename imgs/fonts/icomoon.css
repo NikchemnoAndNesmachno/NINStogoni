@@ -22,33 +22,36 @@
 
 }
 
-.ico-help:before {
+.ico-report:before {
   content: "\e900";
 }
-.ico-download:before {
+.ico-help:before {
   content: "\e901";
 }
-.ico-upload:before {
+.ico-download:before {
   content: "\e902";
 }
-.ico-tag:before {
+.ico-upload:before {
   content: "\e903";
 }
-.ico-copy:before {
+.ico-tag:before {
   content: "\e904";
 }
-.ico-account:before {
+.ico-copy:before {
   content: "\e905";
 }
-.ico-contact:before {
+.ico-account:before {
   content: "\e906";
 }
-.ico-like:before {
+.ico-contact:before {
   content: "\e907";
 }
-.ico-views:before {
+.ico-like:before {
   content: "\e908";
 }
-.ico-search:before {
+.ico-views:before {
   content: "\e909";
+}
+.ico-search:before {
+  content: "\e90a";
 }

@@ -127,8 +127,8 @@ body{
                     height: auto;
                     width: 100%;
                     background-color: black;
-                    color: lime;
-                    border: lime solid 1px;
+                    color: dodgerblue;
+                    border: dodgerblue solid 1px;
                     &:active{
                         transform: scale(0.9);
                     }

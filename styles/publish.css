@@ -1,0 +1,23 @@
+body{
+    color: red;
+    background-color: black;
+    font: 14px "Liberation Mono", Helvetica, Arial, sans-serif;
+}
+
+#file-input-panel{
+
+    label[for="file-input"]{
+        display: block;
+        height: 100px;
+        background-color: dodgerblue;
+    }
+    input[type=file]{
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+}

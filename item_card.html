@@ -36,7 +36,7 @@
         <span id="item-video-name">Назва відео</span>
     </section>
     <article id="item-video-info-panel">
-        <div id="item-video-upper-panel">
+        <div class="upper-panel">
             <section id="info-statistics-panel">
                 <div id="info-statistics-likes">
                     <span class="likes-title ico-like"></span>
@@ -52,17 +52,34 @@
                     <span class="date-time">14:08</span>
                 </div>
             </section>
-            <section id="info-tags-panel">
+            <section id="button-panel">
+                <button type="button" id="like-button" class="ico-like"></button>
+                <button type="button" id="download-button" class="ico-download"></button>
+                <button type="button" id="copy-button" class="ico-copy"></button>
+                <button type="button" id="report-button" class="ico-report"></button>
+            </section>
+        </div>
+
+        <details>
+            <summary>Опис</summary>
+            <div class="details-content">
+                <span id="info-description">Якийсь опис відео<br>Якийсь опис відеоЯкийсь опис відеоЯкийсь опис відео</span>
+            </div>
+        </details>
+        <details>
+            <summary>Теги</summary>
+            <div id="tags-list" class="details-content">
                 <span class="tag-item">Тег 1</span>
                 <span class="tag-item">Тег 2</span>
                 <span class="tag-item">Тег 3</span>
-            </section>
-            <aside id="button-panel">
-                <button type="button" id="download-button" class="ico-download"></button>
-                <button type="button" id="copy-button" class="ico-copy"></button>
-            </aside>
-        </div>
-        <span id="info-description">Якийсь опис відео<br>Якийсь опис відеоЯкийсь опис відеоЯкийсь опис відео</span>
+                <span class="tag-item">Тег 1</span>
+                <span class="tag-item">Тег 2</span>
+                <span class="tag-item">Тег 334</span>
+                <span class="tag-item">Тег 1</span>
+                <span class="tag-item">Тег 2</span>
+                <span class="tag-item">Тег 3</span>
+            </div>
+        </details>
     </article>
 </main>
 <footer style="text-align: center;">

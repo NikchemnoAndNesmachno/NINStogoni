@@ -2,26 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="style.css" rel="stylesheet">
+    <link href="styles/publish.css" rel="stylesheet">
+    <link href="styles/header.css" rel="stylesheet">
+    <link href="imgs/fonts/icomoon.css" rel="stylesheet">
     <link href="imgs/logo_квадратне_стогони.svg" rel="icon" type="image/x-icon">
-    <title>Стогони НІН</title>
+    <title>Надіслати</title>
 </head>
 <body>
 <header>
     <a href="index.html">
-        <img src="imgs/logo_стогони.svg" width="200" alt="logo">
+        <img src="imgs/logo_стогони.svg" alt="logo">
     </a>
-    <nav>
-        <a href="help.html">Допомога</a>
-        <a href="help.html">Контакти</a>
-        <a href="publish.html">Публікувати</a>
-        <a href="account.html">Профіль</a>
+    <nav id="navigation-panel">
+        <a class="nav-info" href="help.html">
+            <span class="ico-help"></span>
+            <span class="nav-hint">Допомога</span></a>
+        <a class="nav-info" href="help.html">
+            <span class="ico-contact"></span>
+            <span class="nav-hint">Контакти</span></a>
+        <a class="nav-action" href="publish.html">
+            <span class="ico-upload"></span>
+            <span class="nav-hint">Публікувати</span></a>
+        <a class="nav-account" href="signin.html">
+            <span class="ico-account"></span>
+            <span class="nav-hint">Профіль</span></a>
     </nav>
 </header>
 <main>
     <form id="publish-form" autocomplete="on" action="publish.html" method="post">
         <section id="file-input-panel">
-            <input type="file" name="file-input" id="file-input">
+            <label for="file-input" class="file-input-label">Обрати файл ...
+                <input type="file" name="file-input" id="file-input">
+            </label>
+
             <video id="video-preview" width="300" muted src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"></video>
             <input type="range" id="time-slider" min="0" max="100" step="1" value="0">
             <input type="text" id="time-text" value="0:02:30:20">
