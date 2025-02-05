@@ -1,124 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link href="styles/index.css" rel="stylesheet">
-    <link href="styles/header.css" rel="stylesheet">
-    <link href="imgs/fonts/icomoon.css" rel="stylesheet">
-    <link href="imgs/logo_квадратне_стогони.svg" rel="icon" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="styles/index.css" rel="stylesheet" />
+    <link href="styles/header.css" rel="stylesheet" />
+    <link href="imgs/fonts/icomoon.css" rel="stylesheet" />
+    <link
+      href="imgs/logo_квадратне_стогони.svg"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.4.0/dist/axios.min.js"></script>
+    <script type="module" src="./scripts/index.js"></script>
     <title>Стогони НІН</title>
-
-</head>
-<body>
-<header>
-    <a href="index.html">
-        <img src="imgs/logo_стогони.svg" alt="logo">
-    </a>
-    <nav id="navigation-panel">
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="imgs/logo_стогони.svg" alt="logo" />
+      </a>
+      <nav id="navigation-panel">
         <a class="nav-info" href="help.html">
-            <span class="ico-help"></span>
-            <span class="nav-hint">Допомога</span></a>
+          <span class="ico-help"></span>
+          <span class="nav-hint">Допомога</span></a
+        >
         <a class="nav-info" href="help.html">
-            <span class="ico-contact"></span>
-            <span class="nav-hint">Контакти</span></a>
+          <span class="ico-contact"></span>
+          <span class="nav-hint">Контакти</span></a
+        >
         <a class="nav-action" href="publish.html">
-            <span class="ico-upload"></span>
-            <span class="nav-hint">Публікувати</span></a>
+          <span class="ico-upload"></span>
+          <span class="nav-hint">Публікувати</span></a
+        >
         <a class="nav-account" href="signin.html">
-            <span class="ico-account"></span>
-            <span class="nav-hint">Профіль</span></a>
-    </nav>
-</header>
-<main>
-    <section id="search-panel">
+          <span class="ico-account"></span>
+          <span class="nav-hint">Профіль</span></a
+        >
+      </nav>
+    </header>
+    <main>
+      <section id="search-panel">
         <section id="search-input-panel">
-            <div class="search-title">
-                <button id="search-button" class="ico-search"></button>
-                <input type="search" id="name-input" name="name-input" placeholder="Назва відео">
-            </div>
-            <div class="add-tags">
-                <input type="search" id="tag-input" name="tag-input" placeholder="tag_name" autocomplete="on">
-                <button type="button" id="add-tag-button" class="ico-tag"></button>
-            </div>
+          <div class="search-title">
+            <button id="search-button" class="ico-search"></button>
+            <input
+              type="search"
+              id="name-input"
+              name="name-input"
+              placeholder="Назва відео"
+            />
+          </div>
+          <div class="add-tags">
+            <input
+              type="search"
+              id="tag-input"
+              name="tag-input"
+              placeholder="tag_name"
+              autocomplete="on"
+            />
+            <button type="button" id="add-tag-button" class="ico-tag"></button>
+          </div>
         </section>
-        <section id="tag-panel">
-
-        </section>
-    </section>
-    <section id="content-list">
+        <section id="tag-panel"></section>
+      </section>
+      <section id="content-list">
         <article class="search-result-element">
-            <a href="item_card.html">
-                <img src="imgs/example_result.png" alt="Результат">
-            </a>
-            <div class="search-result-below-panel">
-                <section class="search-result-statistics">
-                    <div class="search-result-statistics-likes">
-                        <span class="likes-title ico-like"></span>
-                        <span class="likes-number">200</span>
-                    </div>
-                    <div class="search-result-statistics-views">
-                        <span class="views-title ico-views"></span>
-                        <span class="views-number">2300</span>
-                    </div>
-                </section>
-                <section class="search-result-statistics-buttons">
-                    <button type="button" id="download-button" class="ico-download"></button>
-                    <button type="button" id="copy-button" class="ico-copy"></button>
-                </section>
-            </div>
-            <section class="search-result-description">
-                <span class="search-result-description-title">Назва відео</span>
+          <a href="item_card.html">
+            <img src="imgs/example_result.png" alt="Результат" />
+          </a>
+          <div class="search-result-below-panel">
+            <section class="search-result-statistics">
+              <div class="search-result-statistics-likes">
+                <span class="likes-title ico-like"></span>
+                <span class="likes-number">200</span>
+              </div>
+              <div class="search-result-statistics-views">
+                <span class="views-title ico-views"></span>
+                <span class="views-number">2300</span>
+              </div>
             </section>
-            <section class="search-result-hover" style="display: none;">
-                <button type="button" id="hover-download-button" class="result-download">Скачати</button>
-                <button type="button" id="hover-copy-button" class="result-copy">Скопіювати</button>
-                <button type="button" id="hover-info-button" class="result-info">Скачати</button>
+            <section class="search-result-statistics-buttons">
+              <button
+                type="button"
+                id="download-button"
+                class="ico-download"
+              ></button>
+              <button type="button" id="copy-button" class="ico-copy"></button>
             </section>
+          </div>
+          <section class="search-result-description">
+            <span class="search-result-description-title">Назва відео</span>
+          </section>
+          <section class="search-result-hover" style="display: none">
+            <button
+              type="button"
+              id="hover-download-button"
+              class="result-download"
+            >
+              Скачати
+            </button>
+            <button type="button" id="hover-copy-button" class="result-copy">
+              Скопіювати
+            </button>
+            <button type="button" id="hover-info-button" class="result-info">
+              Скачати
+            </button>
+          </section>
         </article>
         <article class="search-result-element">
-            <a href="item_card.html">
-                <img src="imgs/example_result.png" alt="Результат">
-            </a>
-            <div class="search-result-below-panel">
-                <section class="search-result-statistics">
-                    <div class="search-result-statistics-likes">
-                        <span class="likes-title ico-like"></span>
-                        <span class="likes-number">200</span>
-                    </div>
-                    <div class="search-result-statistics-views">
-                        <span class="views-title ico-views"></span>
-                        <span class="views-number">2300</span>
-                    </div>
-                </section>
-                <section class="search-result-statistics-buttons">
-                    <button type="button" id="download-button" class="ico-download"></button>
-                    <button type="button" id="copy-button" class="ico-copy"></button>
-                </section>
-            </div>
-            <section class="search-result-description">
-                <span class="search-result-description-title">Назва відео</span>
+          <a href="item_card.html">
+            <img src="imgs/example_result.png" alt="Результат" />
+          </a>
+          <div class="search-result-below-panel">
+            <section class="search-result-statistics">
+              <div class="search-result-statistics-likes">
+                <span class="likes-title ico-like"></span>
+                <span class="likes-number">200</span>
+              </div>
+              <div class="search-result-statistics-views">
+                <span class="views-title ico-views"></span>
+                <span class="views-number">2300</span>
+              </div>
             </section>
-            <section class="search-result-hover" style="display: none;">
-                <button type="button" id="hover-download-button" class="result-download">Скачати</button>
-                <button type="button" id="hover-copy-button" class="result-copy">Скопіювати</button>
-                <button type="button" id="hover-info-button" class="result-info">Скачати</button>
+            <section class="search-result-statistics-buttons">
+              <button
+                type="button"
+                id="download-button"
+                class="ico-download"
+              ></button>
+              <button type="button" id="copy-button" class="ico-copy"></button>
             </section>
+          </div>
+          <section class="search-result-description">
+            <span class="search-result-description-title">Назва відео</span>
+          </section>
+          <section class="search-result-hover" style="display: none">
+            <button
+              type="button"
+              id="hover-download-button"
+              class="result-download"
+            >
+              Скачати
+            </button>
+            <button type="button" id="hover-copy-button" class="result-copy">
+              Скопіювати
+            </button>
+            <button type="button" id="hover-info-button" class="result-info">
+              Скачати
+            </button>
+          </section>
         </article>
-    </section>
-    <section id="pagination-panel">
-        <a href="#" id="pagination-arrow-left">&laquo;</a>
-        <a href="#" class="page-position">1</a>
-        <a href="#" class="page-position">2</a>
-        <a href="#" class="page-position page-position-active">3</a>
-        <a href="#" class="page-position">4</a>
-        <a href="#" class="page-position">5</a>
-        <a href="#" id="pagination-arrow-right">&raquo;</a>
-    </section>
-</main>
-<footer>
-    Будь-що
-</footer>
-<script type="module" src="scripts/dom-getter.js"></script>
-<script type="module" src="scripts/tag-list.js"></script>
-</body>
+      </section>
+      <section id="pagination-panel"></section>
+    </main>
+    <footer>Будь-що</footer>
+    <script type="module" src="scripts/dom-getter.mjs" defer></script>
+    <script type="module" src="scripts/index.js" defer></script>
+  </body>
 </html>
